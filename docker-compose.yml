@@ -1,9 +1,11 @@
-version: '2'
+
+# http://localhost/askomics/
+# http://localhost/virtuoso
+
+version: '3'
 services:
     askomics:
         image: askomics/askomics
-        ports:
-            - "6542:6543"
         links:
             - virtuoso
         environment:
@@ -24,19 +26,19 @@ services:
             DBA_PASSWORD: "dba"
             SPARQL_UPDATE: "true"
             DEFAULT_GRAPH: "http://localhost:8890/DAV"
-        ports:
-            - "8891:8890"
-            - "1111:1111"
         volumes:
             - ./output-container/virtuoso:/data
 
     nginx:
         image: nginx
+        links:
+            - askomics
+            - virtuoso
         volumes:
             - ./mysite.template:/etc/nginx/conf.d/mysite.template
             - ./output-container/nginx/log:/var/log/nginx/
         ports:
-            - "8080:80"
+            - "80:80"
         environment:
             NGINX_HOST: localhost
             NGINX_PORT: 80
