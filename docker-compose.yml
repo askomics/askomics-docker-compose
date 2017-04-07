@@ -17,6 +17,8 @@ services:
     virtuoso:
         image: tenforce/virtuoso
         environment:
+            VIRT_Parameters_NumberOfBuffers: 510000 # update this parameters in function of how much memory you have (see README.md)
+            VIRT_Parameters_MaxDirtyBuffers: 375000 # update this parameters in function of how much memory you have (see README.md)
             VIRT_Parameters_TN_MAX_memory: 4000000000
             VIRT_SPARQL_ResultSetMaxRows: 100000
             VIRT_SPARQL_MaxQueryCostEstimationTime: 300
