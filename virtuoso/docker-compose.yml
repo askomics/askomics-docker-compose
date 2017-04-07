@@ -35,7 +35,7 @@ services:
             - askomics
             - virtuoso
         volumes:
-            - ../mysite.template:/etc/nginx/conf.d/mysite.template
+            - ./mysite.template:/etc/nginx/conf.d/mysite.template
             - ./output-container/nginx/log:/var/log/nginx/
         ports:
             - "80:80"
