@@ -4,7 +4,7 @@ Deployment of AskOmics/Virtuoso
 
 ## Configuration
 
-Update the `VIRT_Parameters_NumberOfBuffers` and `VIRT_Parameters_MaxDirtyBuffers` environment According to how much memory do you want to allow to Virtuoso:
+Update the `VIRT_Parameters_NumberOfBuffers` and `VIRT_Parameters_MaxDirtyBuffers` environments according to how much memory do you want to allow to Virtuoso:
 
 | Memory available (GB) | NumberOfBuffers | MaxDirtyBuffers |
 |-----------------------|-----------------|-----------------|
