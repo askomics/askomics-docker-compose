@@ -1,7 +1,19 @@
 # askomics-docker-compose
-Deployment of AskOmics/Virtuoso
+Deployment of AskOmics with differents triplestore :
+
+Actual compatibility with Askomics 
+
+| TPS            |  Status |
+|----------------|---------|
+|Virtuoso        |  OK     |
+|Fuseki          |  KO     |
+|AllegroGraph    | not yet implemented |
+|Corese          | not yet implemented |
+
 
 ## Virtuoso
+
+check [tenforce/virtuoso](https://hub.docker.com/r/tenforce/virtuoso/) doc to configure virtuoso execution
 
 ### Configuration
 
@@ -26,4 +38,13 @@ SQL>RDF_GLOBAL_RESET ();
 
 ### Fuseki
 
-### Configuration
+The deployment is Ok but SPARQL AskOmics get Error
+
+### AllegroGraph
+
+not yet implemented
+
+### Corese
+
+not yet implemented
+
