@@ -14,13 +14,12 @@ server {
 
         client_max_body_size 300M;
 
-       location /askomics/ {
+       location /${ASKOMICS_REL_URL}/ {
                 proxy_pass         http://askomics:6543/;
                 proxy_set_header   Host ${NGINX_HOST};
-        }
-        location /virtuoso/ {
+       }
+       location /${TPS_REL_URL}/ {
                 proxy_pass         http://virtuoso:8890/;
                 proxy_set_header   Host ${NGINX_HOST};
-                ##proxy_set_header X-Forwarded-For $remote_addr;
-        }
+       }
 }

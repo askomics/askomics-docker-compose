@@ -1,0 +1,127 @@
+
+		Fri Apr 07 2017
+08:12:21 { Loading plugin 1: Type `plain', file `wikiv' in `/usr/local/virtuoso-opensource/lib/virtuoso/hosting'
+08:12:21   FAILED  plugin 1: Unable to locate file }
+08:12:21 { Loading plugin 2: Type `plain', file `mediawiki' in `/usr/local/virtuoso-opensource/lib/virtuoso/hosting'
+08:12:21   FAILED  plugin 2: Unable to locate file }
+08:12:21 { Loading plugin 3: Type `plain', file `creolewiki' in `/usr/local/virtuoso-opensource/lib/virtuoso/hosting'
+08:12:21   FAILED  plugin 3: Unable to locate file }
+08:12:21 OpenLink Virtuoso Universal Server
+08:12:21 Version 07.20.3217-pthreads for Linux as of Mar 24 2017
+08:12:21 uses parts of OpenSSL, PCRE, Html Tidy
+08:12:21 SQL Optimizer enabled (max 1000 layouts)
+08:12:21 Compiler unit is timed at 0.000486 msec
+08:12:24 Checkpoint started
+08:12:24 Roll forward started
+08:12:24 Roll forward complete
+08:12:24 Checkpoint started
+08:12:24 Checkpoint finished, log reused
+08:12:24 Checkpoint started
+08:12:24 Checkpoint finished, log reused
+08:12:24 Checkpoint started
+08:12:24 Checkpoint finished, log reused
+08:12:24 Checkpoint started
+08:12:24 Checkpoint finished, log reused
+08:12:24 Checkpoint started
+08:12:24 Checkpoint finished, log reused
+08:12:24 PL LOG: Installing Virtuoso Conductor version 1.00.8759 (DAV)
+08:12:24 PL LOG: Installing with dependencies Virtuoso Conductor version 1.00.8759/2017-03-24 11:13 (DAV)
+08:12:24 Checkpoint started
+08:12:24 Checkpoint finished, log reused
+08:12:26 Checkpoint started
+08:12:26 Checkpoint finished, log reused
+08:12:26 PL LOG: Installation with dependencies complete
+08:12:26 Checkpoint started
+08:12:26 Checkpoint finished, log reused
+08:12:26 HTTP/WebDAV server online at 8890
+08:12:26 Server online at 1111 (pid 95)
+08:12:26 Server received signal 15
+08:12:26 Initiating quick shutdown
+08:12:26 Server shutdown complete
+
+		Fri Apr 07 2017
+08:12:26 { Loading plugin 1: Type `plain', file `wikiv' in `/usr/local/virtuoso-opensource/lib/virtuoso/hosting'
+08:12:26   FAILED  plugin 1: Unable to locate file }
+08:12:26 { Loading plugin 2: Type `plain', file `mediawiki' in `/usr/local/virtuoso-opensource/lib/virtuoso/hosting'
+08:12:26   FAILED  plugin 2: Unable to locate file }
+08:12:26 { Loading plugin 3: Type `plain', file `creolewiki' in `/usr/local/virtuoso-opensource/lib/virtuoso/hosting'
+08:12:26   FAILED  plugin 3: Unable to locate file }
+08:12:26 OpenLink Virtuoso Universal Server
+08:12:26 Version 07.20.3217-pthreads for Linux as of Mar 24 2017
+08:12:26 uses parts of OpenSSL, PCRE, Html Tidy
+08:12:26 Database version 3126
+08:12:26 SQL Optimizer enabled (max 1000 layouts)
+08:12:28 Compiler unit is timed at 0.000179 msec
+08:12:28 Roll forward started
+08:12:28     9 transactions, 2065 bytes replayed (100 %)
+08:12:28 Roll forward complete
+08:12:29 Checkpoint started
+08:12:29 Checkpoint finished, log reused
+08:12:29 HTTP/WebDAV server online at 8890
+08:12:29 Server online at 1111 (pid 1)
+
+		Fri Apr 07 2017
+08:23:48 { Loading plugin 1: Type `plain', file `wikiv' in `/usr/local/virtuoso-opensource/lib/virtuoso/hosting'
+08:23:48   FAILED  plugin 1: Unable to locate file }
+08:23:48 { Loading plugin 2: Type `plain', file `mediawiki' in `/usr/local/virtuoso-opensource/lib/virtuoso/hosting'
+08:23:48   FAILED  plugin 2: Unable to locate file }
+08:23:48 { Loading plugin 3: Type `plain', file `creolewiki' in `/usr/local/virtuoso-opensource/lib/virtuoso/hosting'
+08:23:48   FAILED  plugin 3: Unable to locate file }
+08:23:48 OpenLink Virtuoso Universal Server
+08:23:48 Version 07.20.3217-pthreads for Linux as of Mar 24 2017
+08:23:48 uses parts of OpenSSL, PCRE, Html Tidy
+08:23:48 Database version 3126
+08:23:48 SQL Optimizer enabled (max 1000 layouts)
+08:23:49 Compiler unit is timed at 0.000157 msec
+08:23:50 Roll forward started
+08:23:50 Roll forward complete
+08:23:50 Checkpoint started
+08:23:50 Checkpoint finished, log reused
+08:23:52 HTTP/WebDAV server online at 8890
+08:23:52 Server online at 1111 (pid 1)
+08:25:21 Server received signal 15
+08:25:21 Initiating quick shutdown
+08:25:21 Server shutdown complete
+
+		Fri Apr 07 2017
+08:25:26 { Loading plugin 1: Type `plain', file `wikiv' in `/usr/local/virtuoso-opensource/lib/virtuoso/hosting'
+08:25:26   FAILED  plugin 1: Unable to locate file }
+08:25:26 { Loading plugin 2: Type `plain', file `mediawiki' in `/usr/local/virtuoso-opensource/lib/virtuoso/hosting'
+08:25:26   FAILED  plugin 2: Unable to locate file }
+08:25:26 { Loading plugin 3: Type `plain', file `creolewiki' in `/usr/local/virtuoso-opensource/lib/virtuoso/hosting'
+08:25:26   FAILED  plugin 3: Unable to locate file }
+08:25:26 OpenLink Virtuoso Universal Server
+08:25:26 Version 07.20.3217-pthreads for Linux as of Mar 24 2017
+08:25:26 uses parts of OpenSSL, PCRE, Html Tidy
+08:25:26 Database version 3126
+08:25:26 SQL Optimizer enabled (max 1000 layouts)
+08:25:27 Compiler unit is timed at 0.000151 msec
+08:25:28 Roll forward started
+08:25:28 Roll forward complete
+08:25:28 Checkpoint started
+08:25:28 Checkpoint finished, log reused
+08:25:30 HTTP/WebDAV server online at 8890
+08:25:30 Server online at 1111 (pid 1)
+
+		Fri Apr 07 2017
+08:25:48 { Loading plugin 1: Type `plain', file `wikiv' in `/usr/local/virtuoso-opensource/lib/virtuoso/hosting'
+08:25:48   FAILED  plugin 1: Unable to locate file }
+08:25:48 { Loading plugin 2: Type `plain', file `mediawiki' in `/usr/local/virtuoso-opensource/lib/virtuoso/hosting'
+08:25:48   FAILED  plugin 2: Unable to locate file }
+08:25:48 { Loading plugin 3: Type `plain', file `creolewiki' in `/usr/local/virtuoso-opensource/lib/virtuoso/hosting'
+08:25:48   FAILED  plugin 3: Unable to locate file }
+08:25:48 OpenLink Virtuoso Universal Server
+08:25:48 Version 07.20.3217-pthreads for Linux as of Mar 24 2017
+08:25:48 uses parts of OpenSSL, PCRE, Html Tidy
+08:25:48 Database version 3126
+08:25:48 SQL Optimizer enabled (max 1000 layouts)
+08:25:49 Compiler unit is timed at 0.000153 msec
+08:25:50 Roll forward started
+08:25:50 Roll forward complete
+08:25:50 Checkpoint started
+08:25:50 Checkpoint finished, log reused
+08:25:52 HTTP/WebDAV server online at 8890
+08:25:52 Server online at 1111 (pid 1)
+08:26:13 Server received signal 15
+08:26:13 Initiating quick shutdown
+08:26:13 Server shutdown complete
