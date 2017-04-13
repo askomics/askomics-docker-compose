@@ -8,9 +8,14 @@ services:
         image: askomics/docker-askomics
         links:
             - virtuoso
+            - postfix
         environment:
             TRIPLESTORE_ENDPOINT: "http://virtuoso:8890/sparql"
             ASKOMICS_LOAD_URL: "http://askomics:6543"
+            ASKOMICS_SMTP_HOST: postfix
+            ASKOMICS_SMTP_PORT: 25
+            ASKOMICS_SMTP_LOGIN: admin
+            ASKOMICS_SMTP_PASSWORD: passasko
         volumes:
             - ./output-container/askomics/ttl/askomics:/tmp
 
@@ -47,3 +52,9 @@ services:
         
         command: /bin/bash -c "envsubst < /etc/nginx/conf.d/mysite.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
 
+    postfix:
+        image: catatnight/postfix
+        environment:
+            maildomain: mail.askomics.org
+            smtp_user: admin:passasko
+        
