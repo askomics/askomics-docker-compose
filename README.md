@@ -11,4 +11,4 @@ Actual compatibility with Askomics
 |Corese          | not yet implemented |
 
 
-See `README.md` file of each directory for more infos
+See `README.md` files of each directory for more infos
