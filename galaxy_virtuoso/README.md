@@ -10,6 +10,15 @@ This docker-compose deploy the following dockers:
 
 ## Configuration
 
+### Galaxy
+
+docker galaxy-askomics is not yet available on dockerhub, so you have to build it first.
+
+    git clone https://github.com/askomics/docker-galaxy-askomics.git
+    cd docker-galaxy-askomics
+    docker build -t galaxy-askomics .
+
+
 ### Virtuoso
 
 check [tenforce/virtuoso](https://hub.docker.com/r/tenforce/virtuoso/) doc to configure virtuoso execution
