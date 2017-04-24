@@ -39,6 +39,4 @@ services:
             NGINX_PORT: 80
             ASKOMICS_REL_URL: askomics #=> http://localhost:80/askomics
             TPS_REL_URL: fuseki      #=> http://localhost:80/virtuoso
-        
         command: /bin/bash -c "envsubst < /etc/nginx/conf.d/mysite.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
-

@@ -22,6 +22,8 @@ services:
     virtuoso:
         image: tenforce/virtuoso
         environment:
+            VIRT_Parameters_NumberOfBuffers: 510000
+            VIRT_Parameters_MaxDirtyBuffers: 375000
             VIRT_Parameters_TN_MAX_memory: 4000000000
             VIRT_SPARQL_ResultSetMaxRows: 100000
             VIRT_SPARQL_MaxQueryCostEstimationTime: 300
@@ -49,7 +51,6 @@ services:
             NGINX_PORT: 80
             ASKOMICS_REL_URL: askomics #=> http://localhost:80/askomics
             TPS_REL_URL: virtuoso      #=> http://localhost:80/virtuoso
-        
         command: /bin/bash -c "envsubst < /etc/nginx/conf.d/mysite.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
 
     postfix:
