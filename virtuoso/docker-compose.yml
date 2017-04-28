@@ -6,9 +6,7 @@ version: '2'
 services:
     askomics:
         image: askomics/docker-askomics
-        links:
-            - virtuoso
-            - postfix
+        command: ./startAskomics.sh -r -t virtuoso -d prod
         environment:
             TRIPLESTORE_ENDPOINT: "http://virtuoso:8890/sparql"
             ASKOMICS_LOAD_URL: "http://askomics:6543"
@@ -16,6 +14,8 @@ services:
             ASKOMICS_SMTP_PORT: 25
             ASKOMICS_SMTP_LOGIN: admin
             ASKOMICS_SMTP_PASSWORD: passasko
+            TRIPLESTORE_ENDPOINT_USERNAME : dba
+            TRIPLESTORE_ENDPOINT_PASSWD : dba
         volumes:
             - ./output-container/askomics/ttl/askomics:/tmp
 
@@ -35,12 +35,8 @@ services:
             DEFAULT_GRAPH: "http://localhost:8890/DAV"
         volumes:
             - ./output-container/virtuoso:/data
-
     nginx:
         image: nginx
-        links:
-            - askomics
-            - virtuoso
         volumes:
             - ./mysite.template:/etc/nginx/conf.d/mysite.template
             - ./output-container/nginx/log:/var/log/nginx/
