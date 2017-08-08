@@ -11,7 +11,7 @@ services:
             - ./output-container/askomics/ttl/askomics:/tmp
 
     virtuoso:
-        image: tenforce/virtuoso
+        image: xgaia/virtuoso
         environment:
             VIRT_Parameters_NumberOfBuffers: 510000
             VIRT_Parameters_MaxDirtyBuffers: 375000
