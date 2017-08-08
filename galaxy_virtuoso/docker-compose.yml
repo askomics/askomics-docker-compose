@@ -5,8 +5,8 @@ services:
         links:
             - virtuoso
         environment:
-            TRIPLESTORE_ENDPOINT: "http://virtuoso:8890/sparql"
-            ASKOMICS_LOAD_URL: "http://askomics:6543"
+            ASKO_endpoint: "http://virtuoso:8890/sparql"
+            ASKO_load_url: "http://askomics:6543"
         volumes:
             - ./output-container/askomics/ttl/askomics:/tmp
 

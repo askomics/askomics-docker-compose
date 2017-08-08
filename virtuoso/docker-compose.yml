@@ -8,14 +8,14 @@ services:
         image: askomics/docker-askomics
         command: ./startAskomics.sh -r -t virtuoso -d prod
         environment:
-            TRIPLESTORE_ENDPOINT: "http://virtuoso:8890/sparql"
-            ASKOMICS_LOAD_URL: "http://askomics:6543"
-            ASKOMICS_SMTP_HOST: postfix
-            ASKOMICS_SMTP_PORT: 25
-            ASKOMICS_SMTP_LOGIN: admin
-            ASKOMICS_SMTP_PASSWORD: passasko
-            TRIPLESTORE_ENDPOINT_USERNAME : dba
-            TRIPLESTORE_ENDPOINT_PASSWD : dba
+            ASKO_endpoint: "http://virtuoso:8890/sparql"
+            ASKO_load_url: "http://askomics:6543"
+            ASKO_smtp_host: postfix
+            ASKO_smtp_port: 25
+            ASKO_smtp_login: admin
+            ASKO_smtp_password: passasko
+            ASKO_enpoint_username : dba
+            ASKO_endpoint_passwd : dba
         volumes:
             - ./output-container/askomics/ttl/askomics:/tmp
 
