@@ -10,8 +10,8 @@ services:
         links:
             - fuseki
         environment:
-            TRIPLESTORE_ENDPOINT: "http://fuseki:3030/database/query"
-            ASKOMICS_LOAD_URL: "http://askomics:6543"
+            ASKO_endpoint: "http://fuseki:3030/database/query"
+            ASKO_load_url: "http://askomics:6543"
         volumes:
             - ./output-container/askomics/ttl/askomics:/tmp
 
