@@ -6,7 +6,7 @@ version: '2'
 services:
     askomics:
         image: askomics/docker-askomics
-        command: ./startAskomics.sh -r -t virtuoso -d prod
+        command: ./startAskomics.sh -t virtuoso -d dev
         environment:
             ASKO_endpoint: "http://virtuoso:8890/sparql"
             ASKO_load_url: "http://askomics:6543"
@@ -14,7 +14,7 @@ services:
             ASKO_smtp_port: 25
             ASKO_smtp_login: admin
             ASKO_smtp_password: passasko
-            ASKO_enpoint_username : dba
+            ASKO_endpoint_username : dba
             ASKO_endpoint_passwd : dba
         volumes:
             - ./output-container/askomics/ttl/askomics:/tmp
