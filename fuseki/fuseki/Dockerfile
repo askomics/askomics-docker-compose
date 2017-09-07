@@ -3,8 +3,8 @@ MAINTAINER Olivier Filangi "olivier.filangi@inra.fr"
 
 # Variables part
 #----------------------------------------------------------------------------------------
-ENV JENA apache-jena-3.2.0
-ENV FUSEKI apache-jena-fuseki-2.5.0
+ENV JENA apache-jena-3.4.0
+ENV FUSEKI apache-jena-fuseki-3.4.0
 ENV URLJENA http://apache.crihan.fr/dist/jena/binaries/$JENA.tar.gz
 ENV URLFUSEKITAR http://apache.crihan.fr/dist/jena/binaries/$FUSEKI.tar.gz
 
