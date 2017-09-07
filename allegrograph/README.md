@@ -1,4 +1,7 @@
 # AskOmics + Allegrograph
+#---------------------------------------
+
+    Limite with Licence : 5 000 000 triplets.
 
     #pull the allegrograph image
     sudo docker pull franzinc/agraph
