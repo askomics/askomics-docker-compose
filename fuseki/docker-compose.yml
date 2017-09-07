@@ -6,11 +6,12 @@ version: '2'
 services:
     askomics:
         image: askomics/docker-askomics
-        command: ./startAskomics.sh -r fuseki prod
+        command: ./startAskomics.sh -t fuseki -d prod
         links:
             - fuseki
         environment:
             ASKO_endpoint: "http://fuseki:3030/database/query"
+            ASKO_updatepoint: "http://fuseki:3030/database/update"
             ASKO_load_url: "http://askomics:6543"
         volumes:
             - ./output-container/askomics/ttl/askomics:/tmp
