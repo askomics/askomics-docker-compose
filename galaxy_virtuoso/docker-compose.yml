@@ -1,7 +1,7 @@
 version: '3'
 services:
     askomics:
-        image: askomics
+        image: askomics/askomics
         links:
             - virtuoso
         environment:
@@ -11,7 +11,7 @@ services:
             - ./output-container/askomics/ttl/askomics:/tmp
 
     virtuoso:
-        image: xgaia/virtuoso
+        image: askomics/virtuoso
         environment:
             VIRT_Parameters_NumberOfBuffers: 510000
             VIRT_Parameters_MaxDirtyBuffers: 375000
