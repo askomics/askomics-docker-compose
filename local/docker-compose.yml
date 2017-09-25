@@ -5,17 +5,13 @@
 version: '2'
 services:
     askomics:
-        image: askomics/askomics
+        image: local_askomics # You have to build a local_askomics image before using this file
         command: ./startAskomics.sh -r -t virtuoso -d prod
         environment:
-            ASKO_endpoint: "http://virtuoso:8890/sparql"
-            ASKO_load_url: "http://askomics:6543"
-            ASKO_smtp_host: postfix
-            ASKO_smtp_port: 25
-            ASKO_smtp_login: admin
-            ASKO_smtp_password: passasko
-            ASKO_endpoint_username : dba
-            ASKO_endpoint_passwd : dba
+            TRIPLESTORE_ENDPOINT: "http://virtuoso:8890/sparql"
+            ASKOMICS_LOAD_URL: "http://askomics:6543"
+            TRIPLESTORE_ENDPOINT_USERNAME : dba
+            TRIPLESTORE_ENDPOINT_PASSWD : dba
         volumes:
             - ./output-container/askomics/ttl/askomics:/tmp
 
@@ -48,9 +44,3 @@ services:
             ASKOMICS_REL_URL: askomics #=> http://localhost:80/askomics
             TPS_REL_URL: virtuoso      #=> http://localhost:80/virtuoso
         command: /bin/bash -c "envsubst < /etc/nginx/conf.d/mysite.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
-
-    postfix:
-        image: catatnight/postfix
-        environment:
-            maildomain: mail.askomics.org
-            smtp_user: admin:passasko

@@ -5,7 +5,7 @@
 version: '2'
 services:
     askomics:
-        image: askomics/docker-askomics
+        image: askomics/askomics
         command: ./startAskomics.sh -t fuseki -d prod
         links:
             - fuseki
@@ -17,8 +17,7 @@ services:
             - ./output-container/askomics/ttl/askomics:/tmp
 
     fuseki:
-        image: askomics/jena-fuseki
-        build: ./fuseki
+        image: stain/jena-fuseki
         environment:
             ADMIN_PASSWORD: "pw123"
             JVM_ARGS: "-Xmx2g"

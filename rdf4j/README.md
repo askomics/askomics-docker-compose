@@ -2,7 +2,7 @@
 
 This docker-compose deploy the following dockers:
 
-- askomics/docker-askomics
+- askomics/askomics
 - yyz1989/rdf4j
 - nginx
 - catatnight/postfix

@@ -2,7 +2,7 @@
 
 This docker-compose deploy the following dockers:
 
-- askomics/docker-askomics
+- askomics/askomics
 - askomics/jena-fuseki
 - nginx
 

@@ -1,26 +1,23 @@
 # AskOmics + Allegrograph
-#---------------------------------------
 
-    Limite with Licence : 5 000 000 triplets.
+This docker-compose deploy the following dockers:
 
-    #pull the allegrograph image
-    sudo docker pull franzinc/agraph
+- askomics/askomics
+- franzinc/agraph
+- nginx
+- catatnight/postfix
 
-    #run
-    sudo docker run -d -p 10000-10035:10000-10035 --shm-size 1g --name agraph franzinc/agraph
+## Configuration
 
-    #info:
-    http://localhost:10035
-    user:test
-    passwd:xyzzy
+### Agraph
 
-    #action:
-    go to http://localhost:10035
-    create new repository -> 'database'
+You have to create a new repository first.
 
-    #Parameters
+Got to [http://localhost:10035](http://localhost:10035) and create a nex repository named `database`
 
-    askomics.endpoint = http://localhost:10035/repositories/database/sparql
-    askomics.endpoint.username = test
-    askomics.endpoint.passwd = xyzzy
+The licence limite to 5000000 the number of triples
 
+
+### Postfix
+
+You can update the smpt username and password. Don't forget to also update the smtp user in the AskOmics environments variables.
