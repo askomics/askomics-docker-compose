@@ -6,7 +6,7 @@ version: '2'
 services:
     askomics:
         image: local_askomics
-        command: ./startAskomics.sh -r -t virtuoso -d dev
+        command: ./startAskomics.sh -r -t virtuoso -d prod
         environment:
             TRIPLESTORE_ENDPOINT: "http://virtuoso:8890/sparql"
             ASKOMICS_LOAD_URL: "http://askomics:6543"
@@ -22,8 +22,8 @@ services:
     virtuoso:
         image: askomics/virtuoso
         environment:
-            VIRT_Parameters_NumberOfBuffers: 680000
-            VIRT_Parameters_MaxDirtyBuffers: 500000
+            VIRT_Parameters_NumberOfBuffers: 10000   # See virtuoso/README.md to adapt value of this line
+            VIRT_Parameters_MaxDirtyBuffers: 6000    # See virtuoso/README.md to adapt value of this line
             VIRT_Parameters_TN_MAX_memory: 4000000000
             VIRT_SPARQL_ResultSetMaxRows: 100000
             VIRT_SPARQL_MaxQueryCostEstimationTime: 30000
