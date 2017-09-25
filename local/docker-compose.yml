@@ -5,15 +5,11 @@
 version: '2'
 services:
     askomics:
-        image: local_askomics
+        image: local_askomics # You have to build a local_askomics image before using this file
         command: ./startAskomics.sh -r -t virtuoso -d prod
         environment:
             TRIPLESTORE_ENDPOINT: "http://virtuoso:8890/sparql"
             ASKOMICS_LOAD_URL: "http://askomics:6543"
-            ASKOMICS_SMTP_HOST: postfix
-            ASKOMICS_SMTP_PORT: 25
-            ASKOMICS_SMTP_LOGIN: admin
-            ASKOMICS_SMTP_PASSWORD: passasko
             TRIPLESTORE_ENDPOINT_USERNAME : dba
             TRIPLESTORE_ENDPOINT_PASSWD : dba
         volumes:
