@@ -2,7 +2,7 @@
 
 This docker-compose deploy the following dockers:
 
-- askomics/docker-askomics
+- askomics/askomics
 - ontotext/graphdb
 - nginx
 - catatnight/postfix

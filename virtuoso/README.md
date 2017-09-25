@@ -2,8 +2,8 @@
 
 This docker-compose deploy the following dockers:
 
-- askomics/docker-askomics
-- tenforce/virtuoso
+- askomics/askomics
+- askomics/virtuoso
 - nginx
 - catatnight/postfix
 

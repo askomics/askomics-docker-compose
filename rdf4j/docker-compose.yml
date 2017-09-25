@@ -5,7 +5,7 @@
 version: '2'
 services:
     askomics:
-        #image: askomics/docker-askomics
+        image: askomics/askomics
         image : test
         command: ./startAskomics.sh -t rdf4j -d prod
         environment:
