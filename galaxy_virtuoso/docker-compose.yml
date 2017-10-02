@@ -16,9 +16,7 @@ services:
             VIRT_Parameters_NumberOfBuffers: 510000
             VIRT_Parameters_MaxDirtyBuffers: 375000
             VIRT_Parameters_TN_MAX_memory: 4000000000
-            VIRT_SPARQL_ResultSetMaxRows: 100000
-            VIRT_SPARQL_MaxQueryCostEstimationTime: 300
-            VIRT_SPARQL_MaxQueryExecutionTime: 300
+            VIRT_SPARQL_ResultSetMaxRows: 100000000
             VIRT_SPARQL_MaxDataSourceSize: 1000000000
             VIRT_Flags_TN_MAX_memory: 4000000000
             DBA_PASSWORD: "dba"

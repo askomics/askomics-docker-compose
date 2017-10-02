@@ -20,14 +20,12 @@ services:
             - ./output-container/askomics/ttl/askomics:/tmp
 
     virtuoso:
-        image: xgaia/virtuoso
+        image: askomics/virtuoso
         environment:
             VIRT_Parameters_NumberOfBuffers: 680000
             VIRT_Parameters_MaxDirtyBuffers: 500000
             VIRT_Parameters_TN_MAX_memory: 4000000000
-            VIRT_SPARQL_ResultSetMaxRows: 100000
-            VIRT_SPARQL_MaxQueryCostEstimationTime: 30000
-            VIRT_SPARQL_MaxQueryExecutionTime: 30000
+            VIRT_SPARQL_ResultSetMaxRows: 100000000
             VIRT_SPARQL_MaxDataSourceSize: 1000000000
             VIRT_Flags_TN_MAX_memory: 4000000000
             DBA_PASSWORD: "dba"
