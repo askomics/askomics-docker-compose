@@ -5,7 +5,7 @@
 version: '2'
 services:
     askomics:
-        image: askomics/docker-askomics
+        image: askomics/askomics
         command: ./startAskomics.sh -t graphdb -d prod
         environment:
             ASKO_endpoint: "http://graphdb:7200/repositories/SYSTEM"

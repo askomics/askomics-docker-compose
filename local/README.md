@@ -2,7 +2,7 @@
 
 This docker-compose deploy the following dockers:
 
-- askomics/askomics
+- local_askomics: a local image of askomics. You have to build it first
 - askomics/virtuoso
 - nginx
 - catatnight/postfix
