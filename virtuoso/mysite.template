@@ -26,4 +26,9 @@ server {
         proxy_pass         http://virtuoso:8890/;
         proxy_set_header   Host ${NGINX_HOST};
    }
-}
+
+   location /rdfsurveyor/ {
+        proxy_pass         http://rdfsurveyor/;
+        proxy_set_header   Host ${NGINX_HOST};
+   }
+}  
