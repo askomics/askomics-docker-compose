@@ -52,3 +52,6 @@ services:
         environment:
             maildomain: mail.askomics.org
             smtp_user: admin:passasko
+   
+    rdfsurveyor:
+        image: askomics/rdfsurveyor
