@@ -1,17 +1,17 @@
-# AskOmics + RDF4J
+# AskOmics + Blazegraph
 
 This docker-compose deploy the following dockers:
 
 - askomics/askomics
-- yyz1989/rdf4j
+- lyrasis/blazegraph:2.1.4
 - nginx
 - catatnight/postfix
 
 ## Configuration
 
-### RDF4J
+### Blazegraph
 
-docker run -d --rm -p 8080:8080 -e RDF4J_DATA=/data -v /opt/rdf4j-data:/data -e JVM_PARAMS="-Xms1g -Xmx8g" yyz1989/rdf4j
+docker run --name blazegraph -d -p 8889:8080 lyrasis/blazegraph:2.1.4
 
 ### Postfix
 
