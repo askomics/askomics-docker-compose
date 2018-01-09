@@ -3,7 +3,7 @@ export MYIP=$(ifconfig | awk ' $0 ~ "192.168" {split($2,a,":");print a[2]}')
 export MYIP2=$(ifconfig | awk ' $0 ~ "192.168" {split($2,a,":");gsub("\\.","-",a[2]);print a[2]}')
 echo "${MYIP} openstack-${MYIP2}.genouest.org" >> /etc/hosts
 
-cd `dirname $0`/virtuoso
+cd `dirname $0`/virtuoso-federation
 
 # Custumize vituoso according ressources
 S=$(cat /proc/meminfo | grep MemTotal | awk '{print int($2/(1024*1024))}')
@@ -32,4 +32,6 @@ sed  's/VIRT_Parameters_MaxDirtyBuffers:.*/VIRT_Parameters_MaxDirtyBuffers: '$Ma
 docker-compose pull
 docker-compose up -d
 
+echo "========================================================================"
 echo "Askomics is reachable at http://openstack-${MYIP2}.genouest.org/askomics"
+echo "========================================================================"
