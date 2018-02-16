@@ -12,6 +12,7 @@ services:
             ASKO_fdendpoint: "http://fedx4askomics:4040/fedx"
             ASKO_load_url: "http://askomics:6543"
             ASKO_hack_virtuoso : "true"
+            ASKO_allowed_file_types : "'application/octet-stream','text/turtle','text/plain','text/csv','text/tab-separated-values','text/fasta'"
             ASKO_smtp_host: postfix
             ASKO_smtp_port: 25
             ASKO_smtp_login: admin
