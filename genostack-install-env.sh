@@ -1,6 +1,6 @@
 #!/bin/bash
-export MYIP=$(ifconfig | awk ' $0 ~ "192.168" {split($2,a,":");print a[2]}')
-export MYIP2=$(ifconfig | awk ' $0 ~ "192.168" {split($2,a,":");gsub("\\.","-",a[2]);print a[2]}')
+export MYIP=$(hostname --all-ip-addresses | awk '$1 ~ "192" {print $1;exit} $2 ~ "192" {print $2}')
+export MYIP2=$(echo $MYIP | awk '{gsub("\\.","-",$0);print}')
 echo "${MYIP} openstack-${MYIP2}.genouest.org" >> /etc/hosts
 
 cd `dirname $0`/virtuoso-federation
