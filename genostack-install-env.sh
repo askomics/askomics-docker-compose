@@ -3,31 +3,17 @@ export MYIP=$(hostname --all-ip-addresses | awk '$1 ~ "192" {print $1;exit} $2 ~
 export MYIP2=$(echo $MYIP | awk '{gsub("\\.","-",$0);print}')
 echo "${MYIP} openstack-${MYIP2}.genouest.org" >> /etc/hosts
 
-cd `dirname $0`/virtuoso-federation
+cd $(dirname $0)/virtuoso-federation
 
-# Custumize vituoso according ressources
-S=$(cat /proc/meminfo | grep MemTotal | awk '{print int($2/(1024*1024))}')
+# Get total memory
+S=$(cat /proc/meminfo | grep MemTotal | awk '{print $2/(1024*1024)}' OFMT="%0.0f")
 
-NumberOfBuffers=170000
-MaxDirtyBuffers=130000
+NumberOfBuffers=$(((S*680000)/8))
+MaxDirtyBuffers=$(((S*500000)/8))
 
-if [ "$(( S - 64 ))" -le "2" ] ; then NumberOfBuffers=5450000;MaxDirtyBuffers=4000000;fi
-if [ "$(( S - 48 ))" -le "2" ]; then NumberOfBuffers=4000000;MaxDirtyBuffers=3000000;fi
-if [ "$(( S - 32 ))" -le "2" ]; then NumberOfBuffers=2720000;MaxDirtyBuffers=2000000;fi
-if [ "$(( S - 24 ))" -le "2" ]; then NumberOfBuffers=1360000;MaxDirtyBuffers=1000000;fi
-if [ "$(( S - 16 ))" -le "2" ]; then NumberOfBuffers=1360000;MaxDirtyBuffers=1000000;fi
-if [ "$(( S - 8 ))" -le "2" ]; then NumberOfBuffers=680000;MaxDirtyBuffers=500000;fi
-if [ "$(( S - 6 ))" -le "2" ]; then NumberOfBuffers=510000;MaxDirtyBuffers=375000;fi
-if [ "$(( S - 4 ))" -le "2" ]; then NumberOfBuffers=340000;MaxDirtyBuffers=250000;fi
-if [ "$(( S - 2 ))" -le "2" ]; then NumberOfBuffers=170000;MaxDirtyBuffers=130000;fi
-
-echo "____________________________________________________________"
-echo "Memtotal => $S"
-echo "Parameters_NumberOfBuffers=$NumberOfBuffers"
-echo "Parameters_MaxDirtyBuffers=$MaxDirtyBuffers"
-
-sed  's/VIRT_Parameters_NumberOfBuffers:.*/VIRT_Parameters_NumberOfBuffers: '$NumberOfBuffers'/' docker-compose.yml > docker-compose.1.yml
-sed  's/VIRT_Parameters_MaxDirtyBuffers:.*/VIRT_Parameters_MaxDirtyBuffers: '$MaxDirtyBuffers'/' docker-compose.1.yml > docker-compose.yml
+# Sed the docker-compose file
+sed -i 's/VIRT_Parameters_NumberOfBuffers:.*/VIRT_Parameters_NumberOfBuffers: '$NumberOfBuffers'/' docker-compose.yml
+sed -i 's/VIRT_Parameters_MaxDirtyBuffers:.*/VIRT_Parameters_MaxDirtyBuffers: '$MaxDirtyBuffers'/' docker-compose.yml
 
 docker-compose pull
 docker-compose up -d
