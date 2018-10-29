@@ -19,6 +19,9 @@ services:
             VIRT_SPARQL_ResultSetMaxRows: 100000000
             VIRT_SPARQL_MaxDataSourceSize: 1000000000
             VIRT_Flags_TN_MAX_memory: 4000000000
+            VIRT_StopCompilerWhenXOverRunTime: 1
+            VIRT_MaxQueryCostEstimationTime: 400000
+            VIRT_MaxQueryExecutionTime: 60000000
             DBA_PASSWORD: "dba"
             SPARQL_UPDATE: "true"
             DEFAULT_GRAPH: "http://localhost:8890/DAV"
