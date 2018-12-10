@@ -6,15 +6,19 @@ Some docker-compose file to deploy AskOmics with all its dependencies.
 
 ```bash
 # docker
-curl -sSL https://get.docker.com/ | sh
+sudo curl -sSL https://get.docker.com/ | sh
 # docker-compose
 # Debian/ubuntu
-apt install -y docker-compose
+sudo apt install -y docker-compose
 # Fedora
-dnf install -y docker-compose
+sudo dnf install -y docker-compose
 ```
 ## [virtuoso](virtuoso)
 
 - askomics
 - virtuoso
 - nginx
+
+## [fuseki](fuseki)
+
+
