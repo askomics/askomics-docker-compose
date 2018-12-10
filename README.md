@@ -1,14 +1,20 @@
-# askomics-docker-compose
-Deployment of AskOmics with differents triplestore :
+# Docker compose Files
 
-Actual compatibility with Askomics 
+Some docker-compose file to deploy AskOmics with all its dependencies.
 
-| TPS            |  Status |
-|----------------|---------|
-|Virtuoso        |  OK     |
-|Fuseki          |  KO     |
-|AllegroGraph    | not yet implemented |
-|Corese          | not yet implemented |
+## Install docker and docker-compose
 
+```bash
+# docker
+curl -sSL https://get.docker.com/ | sh
+# docker-compose
+# Debian/ubuntu
+apt install -y docker-compose
+# Fedora
+dnf install -y docker-compose
+```
+## [virtuoso](virtuoso)
 
-See `README.md` files of each directory for more infos
+- askomics
+- virtuoso
+- nginx
