@@ -15,10 +15,12 @@ sudo dnf install -y docker-compose
 ```
 ## [virtuoso](virtuoso)
 
-- askomics
-- virtuoso
+- askomics/askomics
+- askomics/virtuoso
 - nginx
 
 ## [fuseki](fuseki)
 
-
+- askomics/askomics
+- xgaia/jena-fuseki:dev
+- nginx
