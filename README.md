@@ -24,3 +24,10 @@ sudo dnf install -y docker-compose
 - askomics/askomics
 - xgaia/jena-fuseki:dev
 - nginx
+
+## [virtuoso-fedx](virtuoso-fedx)
+
+- askomics/askomics
+- askomics/virtuoso
+- askomics/fedx4askomics:rdf4j
+- nginx
