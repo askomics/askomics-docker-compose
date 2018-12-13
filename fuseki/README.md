@@ -6,4 +6,8 @@ This docker-compose deploy the following dockers:
 - askomics/jena-fuseki
 - nginx
 
-The deployment is Ok but SPARQL AskOmics get Error
+## Configuration
+
+### Fuseki
+
+Update the `JVM_ARGS` environment according to how much memory you want to allow to the heap.
