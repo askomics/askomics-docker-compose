@@ -31,3 +31,18 @@ sudo dnf install -y docker-compose
 - askomics/virtuoso
 - askomics/fedx4askomics:rdf4j
 - nginx
+
+## [virtuoso-amnesia](virtuoso)
+
+- askomics/askomics
+- askomics/virtuoso
+- askomics/amnesia
+- nginx
+
+## [virtuoso-amnesia-fedx](virtuoso-fedx)
+
+- askomics/askomics
+- askomics/virtuoso
+- askomics/amnesia
+- askomics/fedx4askomics:rdf4j
+- nginx
